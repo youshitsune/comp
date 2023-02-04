@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+import sys
+
+def comp(a, b):
+    with open(a, "r") as file_a:
+        con_a = list(file_a.read())
+    with open(b, "r") as file_b:
+        con_b = list(file_b.read())
+        
+    choice = int(input("Do you want to show first or second file (1/2): "))
+
+    
+    if choice == 1:
+        for i in range(len(con_a)):
+            if con_a[i] == con_b[i]:
+                print(con_a[i], end="")
+            else:
+                print(f"\x1b[31m{con_a[i]}\x1b[0m", end="")
+
+    elif choice == 2:
+        for i in range(len(con_b)):
+            if con_b[i] == con_a[i]:
+                print(con_b[i], end="")
+            else:
+                print(f"\x1b[31m{con_b[i]}\x1b[0m", end="")
+    else:
+        comp(a, b)
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2 or sys.argv[1] == "-h" or sys.argv[1] == "--help":
+        print("Usage: comp <path of first file> <path of second file>")
+    elif sys.argv[1] != "" and sys.argv[2] != "":
+        comp(sys.argv[1], sys.argv[2])
