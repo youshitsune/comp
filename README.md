@@ -1,18 +1,22 @@
 # COMPare
 
-This is python script that compares two files.
+## **DISCLAIMER**: This C program only compares files the same size.
 
 ## Installation
 Just clone it.
 ```bash
 git clone https://github.com/youshitsune/comp
 ```
-
-## Usage
-Run comp script.
+Compile C program
 
 ```bash
-python3 comp <first_file_path> <second_file_path>
+cc comp.c -o comp
+```
+
+## Usage
+Just run it.
+```bash
+./comp <path of first file> <path of second file>
 ```
 
 When script runs, than type in 1 or 2 depending on what file you want to see.
