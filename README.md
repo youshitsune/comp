@@ -1,5 +1,7 @@
 # COMPare
 
+## **DISCLAIMER**: This program doesn't work on diffrent size files
+
 ## Installation
 Just clone it.
 ```bash
