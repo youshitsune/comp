@@ -1,7 +1,5 @@
 # COMPare
 
-## **DISCLAIMER**: This C program only compares files the same size.
-
 ## Installation
 Just clone it.
 ```bash
